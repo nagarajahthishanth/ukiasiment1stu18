@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html >
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ShowTrackr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+
+  <style>
+
+
+  .add{background-color: #eee;
+  width: 900px;
+  height: auto;
+  border: 1px dotted black;
+  overflow: hidden;
+    margin-left: 180px;
+    padding: 5px;
+}
+
+
+
+
+
+  div.stickya {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 15px;
+  font-size: 10px;
+  height : 2px;
+}
+
+
+.buttonx {
+
+  border: none;
+  border-radius: 10%;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  background-color: #008CBA;
+}
+
+#fname{width: 100%}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div >
+    <div class="navbar-brand" >Show<b>Trackr</b></div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+
+      <li class="active"><a href="Add.html">Add</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="log.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <li><a href="sinup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="add">
+<div class="stickya">ADD TV SHOW</div>
+<br>
+
+
+
+
+    <form>
+      <input type="text"    id="fname" name="fname" placeholder="Enter TV show name"  pattern="[A-Za-z]+[A-Za-z0-9]+" style>
+
+
+              <p id="demo"></p>
+
+            <button type="submit" class="buttonx">Add</i></button>
+        </form>
+
+
+        <div class="footer">
+          <p><marquee direction="right"><h5>Showtracter</h5><marquee></p>
+        </div>
+
+  <script >
+
+
+  // Selectors
+document.querySelector('form').addEventListener('submit', handleSubmitForm);
+
+// Event Handlers
+function handleSubmitForm(e) {
+    e.preventDefault();
+
+
+    var input = document.querySelector('input');
+    if (input.value != ''){document.getElementById("demo").innerHTML = ( input.value + " has been added");}
+    else {document.getElementById("demo").innerHTML = "please Enter TV show name";}
+}
+
+
+
+  </script>
+</body>
+</html>

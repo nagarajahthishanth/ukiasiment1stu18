@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ShowTrackr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href='/include/home.css?rev=ed1a194db5f88783d97fa0466ddfd8f82948fd2f'>
+<link rel='stylesheet' type='text/css' href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+
+
+  html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 100%;
+
+  padding: 0;
+
+}
+
+@media screen and (max-width:100%) {
+  .column {
+    width: 100% ;
+    display: block;
+    padding: 0;
+  }
+}
+
+.card {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.container {
+  padding: 0px 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+
+
+.alink{ background-color: Gainsboro !important;  text-align: center !important; height: 150px; padding-top: 50px;}
+.button1 {
+  background-color: LightGray !important;
+  color: black !important;
+padding: 0.5px 0.5px !important;
+}
+.avatar {
+
+  width: 24.5% !important;
+  height: 450px !important;
+  border-radius: 5% !important;
+}
+
+.img{height: 300px;
+  width:100%;
+
+}
+
+
+.pic {
+  background-color: #eee;
+  width: 75%;
+  height: 390px;
+  border: 1px dotted black;
+  padding-left: 60px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-left: 12%;
+}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+      margin-right: 110px;
+      padding: 5px;
+}
+
+
+
+
+.filterDiv {
+  float: left;
+
+
+  width: 200px;
+  line-height: 5px;
+  text-align: center;
+  margin: 6px;
+  display: none;
+
+  padding: 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div id="main-nav" role="navigation" aria-label="Main">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div >
+    <div class="navbar-brand" >Show<b>Trackr</b></div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Home</a></li>
+
+      <li><a href="Add.html">Add</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="log.html"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+    <li><a href="sinup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
+
+
+    </ul>
+  </div>
+</nav>
+</div>
+
+
+<div  class="alink"  >
+<div class="nav-cont-sortby cat-some-first">
+          <x class= 'button1' onclick="filterSelection('num')">0-9</x>
+          <x class= 'button1' onclick="filterSelection('aaa')">A</x>
+          <x class= 'button1' onclick="filterSelection('bbb')">B</x>
+          <x class= 'button1' onclick="filterSelection('ccc')">C</x>
+          <x class= 'button1' onclick="filterSelection('ed1a194db5f88783d97fa0466ddfd8f82948fd2f')">D</x>
+          <x class= 'button1' onclick="filterSelection('eee')">E</x>
+          <x class= 'button1' onclick="filterSelection('fff')">F</x>
+          <x class= 'button1' onclick="filterSelection('ggg')">G</x>
+          <x class= 'button1' onclick="filterSelection('highlight')">H</x>
+          <x class= 'button1' onclick="filterSelection('iii')">I</x>
+          <x class= 'button1' onclick="filterSelection('jjj')">J</x>
+          <x class= 'button1' onclick="filterSelection('kkk')">K</x>
+          <x class= 'button1' onclick="filterSelection('lll')">L</x>
+          <x class= 'button1' onclick="filterSelection('mmm')">M</x>
+          <x class= 'button1' onclick="filterSelection('nnn')">N</x>
+          <x class= 'button1' onclick="filterSelection('ooo')">O</x>
+          <x class= 'button1' onclick="filterSelection('ppp')">P</x>
+          <x class= 'button1' onclick="filterSelection('qqq')">Q</x>
+          <x class= 'button1' onclick="filterSelection('rrr')">R</x>
+          <x class= 'button1' onclick="filterSelection('sss')">S</x>
+          <x class= 'button1' onclick="filterSelection('ttt')">T</x>
+          <x class= 'button1' onclick="filterSelection('uuu')">U</x>
+          <x class= 'button1' onclick="filterSelection('vvv')">V</x>
+          <x class= 'button1' onclick="filterSelection('www')">W</x>
+          <x class= 'button1' onclick="filterSelection('xxx')">X</x>
+          <x class= 'button1' onclick="filterSelection('yyy')">Y</x>
+          <x class= 'button1' onclick="filterSelection('zzz')">z</x>
+<BR>
+
+
+
+
+
+      <button class= 'button1' onclick="filterSelection('action')">Action</button >
+        <button class= 'button1' onclick="filterSelection('adventure')">Adventure</button >
+          <button class= 'button1' onclick="filterSelection('animation')">Animation</button >
+
+        <button class= 'button1' onclick="filterSelection('children')">Children</button >
+
+        <button class= 'button1' onclick="filterSelection('comedy')">Comedy</button >
+
+  <button class= 'button1' onclick="filterSelection('crime')">Crime</button >
+
+      <button class= 'button1' onclick="filterSelection('documentary')">Documentary</button >
+
+  <button class= 'button1' onclick="filterSelection('drama')">Drama</button >
+
+      <button class= 'button1' onclick="filterSelection('family')">Family</button >
+
+  <button class= 'button1' onclick="filterSelection('fantasy')">Fantasy</button >
+
+      <button class= 'button1' onclick="filterSelection('food')">Food</button >
+      <button class= 'button1' onclick="filterSelection('home and garden')">Home and Garden</button >
+      <button class= 'button1' onclick="filterSelection('horror')">Horror</button >
+        <button class= 'button1' onclick="filterSelection('min-series')">Min-series</button > <br>             <button class= 'button1' onclick="filterSelection('action')">Action</button >
+        <button class= 'button1' onclick="filterSelection('mystery')">Mystery</button >
+          <button class= 'button1' onclick="filterSelection('news')">News</button >
+          <button class= 'button1' onclick="filterSelection('reality')">Reality</button >
+        <button class= 'button1' onclick="filterSelection('romance')">Romance</button >
+        <button class= 'button1' onclick="filterSelection('sci-fi')">Sci-Fi</button >
+        <button class= 'button1' onclick="filterSelection('suspense')">Suspense</button >
+          <button class= 'button1' onclick="filterSelection('track show')">Track show</button >
+            <button class= 'button1' onclick="filterSelection('thriller')">Thriller</button >
+              <button class= 'button1' onclick="filterSelection('travel')">Travel</button >
+
+
+    </div>
+</div>
+
+<br>
+
+<div class="pic">
+  <div class="sticky">TOP 12 SHOWS</div>
+<div class="row">
+  <div class="filterDiv suspense aaa">
+<div class="column">
+<div class="card">
+<a href="pic1.html"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQMwq_mZ2I9qpXPhmIeJ5on2jZTavrF65Kw&usqp=CAU" alt="Jane" ></a><br>
+
+    <h6>Suspense of aaa</h6>
+    <p class="title">Episode 18</p>
+
+  </div>
+</div>
+</div>
+<div class="filterDiv action  aaa" >
+<div class="column">
+<div class="card">
+  <a href="pic2.html"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRih6sNXRWV929y9PEml76Dy6Mcv6WFK34NIg&usqp=CAU" alt="Mike" >
+  </a>
+    <h6>Action of aaa</h6>
+    <p class="title">Episode 81</p>
+
+
+  </div>
+</div>
+</div>
+<div class="filterDiv suspense bbb">
+<div class="column">
+<div class="card">
+  <a href="pic3.html"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJU9SIbWC29QvQNTLwy1YsyPCyAp1_ahhJMw&usqp=CAU" alt="John">
+
+    <h6>Suspense  of bbb</h6>
+    <p class="title">Episode 20</p>
+
+
+
+
+
+  </div>
+</div>
+</div>
+<div class="filterDiv travel ccc">
+<div class="column">
+<div class="card">
+<a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-eR6_O6wzVb4_KfUX5FyyCS8do-w_9e5FtA&usqp=CAU" alt="Mike" >
+
+    <h6>Travel of ccc</h6>
+    <p class="title">Episode 80</p>
+
+
+  </div>
+</div>
+</div>
+<div class="filterDiv travel ddd">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Z_mXYpYptc2-2QWG8kJ0zK6pwU02kI8jmg&usqp=CAU" alt="Mike" >
+  </a>
+    <h6>Travel of ddd</h6>
+    <p class="title">Episode 51</p>
+
+
+  </div>
+</div>
+</div>
+<div class="filterDiv action eee">
+<div class="column">
+<div class="card">
+<a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfSU6yfw-m6rLijPjxAE7Js-aWZSZVx1M2gA&usqp=CAU" alt="Mike" >
+</a>
+    <h6>Action of eee</h6>
+    <p class="title">Episode 81</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filterDiv food fff">
+<div class="column">
+<div class="card">
+<a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWIBawV1oqvIssCYeTuIRkUZD0NnwMQVX6gw&usqp=CAU" alt="Mike" >
+  </a>
+    <h6>Food of fff</h6>
+    <p class="title">Episode 100</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filterDiv fantasy ggg">
+<div class="column">
+<div class="card">
+<a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0vaPXew_DyrACLGRAZaSamlMylfvWTm19Mw&usqp=CAU" alt="Mike" >
+  </a>
+    <h6>Fantasy of ggg</h6>
+    <p class="title">Episode 55</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filterDiv food hhh">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjXtX7hYm0aR0RNsMh9yRAWuxQvzdvNoRkbg&usqp=CAU" alt="Mike" >
+  </a>
+    <h6>Food of hhh</h6>
+    <p class="title">Episode 78</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filterDiv fantasy kkk">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0TmLDcS7n4ZZrLk5wo85IaGaECvAT5CUVCw&usqp=CAU" alt="Mike" >
+  </a>
+    <h6>Fantasy of kkk</h6>
+    <p class="title">Episode 64</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="filterDiv drama ppp">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpZBSiHrBsbf5jHB36n0dY8IK17dIRClALLg&usqp=CAU" alt="Mike" >
+  </a>
+    <h6>Drama of ppp</h6>
+    <p class="title">Episode 91</p>
+
+
+  </div>
+</div>
+</div>
+<div class="filterDiv fantasy qqq">
+<div class="column">
+<div class="card">
+  <a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTP6dBUQrOztIumTbLi0O0I0zHMprGLPb7qw&usqp=CAU" alt="Mike"  >
+  </a>
+    <h6>Fantasy of qqq</h6>
+    <p class="title">Episode 78</p>
+
+
+  </div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="footer">
+  <p><marquee direction="right"><h5>Showtracter</h5><marquee></p>
+</div>
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+</body>
+</html>

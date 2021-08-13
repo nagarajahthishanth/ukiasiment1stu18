@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ShowTrackr</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+.fff {
+  letter-spacing: -2px;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+  <div >
+  <div class="navbar-brand" >Show<b>Trackr</b></div>
+  </div>
+  <ul class="nav navbar-nav">
+    <li><a href="index.html">Home</a></li>
+
+    <li ><a href="Add.html">Add</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+  <li><a href="log.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+  <li class="active"><a href="sinup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+  </ul>
+</div>
+</nav>
+
+<form name='form-login'>
+
+  <div class="divx">
+    <h3><center><b>Sign up</b></center></h3>
+    <i class="glyphicon glyphicon-user">
+  </i>
+    <input type="text" id="na"  placeholder="Name" minlength="5" required size="22">
+    <br>
+    <br>
+
+    @<input type="email" id="name" placeholder="Email" required size="22">
+    <br>
+    <br>
+
+    <i class="fa fa-key icon">
+  </i>
+    <input type="password"
+           id= "pw"
+           placeholder="Password" required size="22">
+           <br>
+               <br>
+               <center><x class="title">By clicking on Sign up you agree to</x> terms & conditions <x class="title">and</x> pravacy policy<br></center>
+
+                 <input  class="btn form-control btn-primary rounded submit px-3" id="rgstr_btn" type="submit" value="Register" onclick="store()">
+      <br>
+      <br>
+
+
+
+
+    <x class="title">Already have an account?</x>
+     <a href="log.html">Log in now</a><br>
+
+</div>
+</form>
+
+
+
+
+<div class="footer">
+  <p><marquee direction="right"><h5>Showtracter</h5><marquee></p>
+</div>
+
+
+<script>
+
+
+function store(){
+  var na = document.getElementById('na');
+  var name = document.getElementById('name');
+  var pw = document.getElementById('pw');
+  var lowerCaseLetters = /[a-z]/g;
+  var upperCaseLetters = /[A-Z]/g;
+  var numbers = /[0-9]/g;
+
+  if(name.value.length == 0){
+      alert('Please fill in name');
+
+    }else if(na.value.length < 6){
+        alert('name letters lagerthan 5');
+
+  }else if(name.value.length == 0){
+      alert('Please fill in email');
+
+  }else if(pw.value.length == 0){
+      alert('Please fill in password');
+
+  }else if(name.value.length == 0 && pw.value.length == 0){
+      alert('Please fill in email and password');
+
+  }else if(pw.value.length != 8){
+      alert(' password letters equal to 8');
+
+  }else if(!pw.value.match(numbers)){
+      alert('please add 1 number in Password');
+
+  }else if(!pw.value.match(upperCaseLetters)){
+      alert('please add 1 uppercase letter in Password');
+
+  }else if(!pw.value.match(lowerCaseLetters)){
+      alert('please add 1 lovercase letter in Password');
+
+  }else{
+      localStorage.setItem('name', name.value);
+      localStorage.setItem('pw', pw.value);
+      alert('Your account has been created');
+  }
+}
+
+
+</script>
+</body>
+</html>

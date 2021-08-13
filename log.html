@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ShowTrackr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+.hax {letter-spacing: -2px;}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+  <div >
+  <div class="navbar-brand" >Show<b>Trackr</b></div>
+  </div>
+  <ul class="nav navbar-nav">
+    <li><a href="index.html">Home</a></li>
+
+    <li ><a href="Add.html">Add</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+  <li class="active"><a href="log.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+  <li ><a href="sinup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+  </ul>
+</div>
+</nav>
+
+<form name='form-login'>
+  <div class="divx">
+
+       <h3><center><b>Log in</b></center></h3>
+
+     @
+       <input type="email" id="userName" placeholder="Email" required size="22">
+
+
+
+                 <br>
+                 <br>
+
+                 <i class="fa fa-key icon">
+               </i>
+       <input type="password" id= "userPw" placeholder="Password" required size="22">
+       <br><br>
+       <div id="remember">
+           <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                  style="display: inline-block;">
+           <label>Remember me</label>
+       </div>
+
+       <input id= "login_btn"   class="btn form-control btn-primary rounded submit px-3" style="background: green !important;" type="submit" value="Login" onclick="check()">
+
+       <br><br>
+       <center>Forgot your password?</center><br>
+
+       <x class="title">Dont have an account yet?</x>
+        <a href="sinup.html">Sign up</a><br>
+        <center><div class="hax">-----------------------------------------o r-------------------------------------------- </div><center>
+       <button  class="btn form-control btn-primary rounded submit px-3" ><i class="fa fa-facebook"></i> Sign in whith Face book</button> <br><br>
+
+         <button  class="btn form-control btn-primary rounded submit px-3" style="background: red !important;"><i class="fa fa-google"></i> Sign in whith Google</button> <br><br>
+
+</div>
+   </form>
+
+
+
+
+
+<div class="footer">
+  <p><marquee direction="right"><h5>Showtracter</h5><marquee></p>
+</div>
+
+
+
+<script>
+  //checking
+  function check(){
+      var storedName = localStorage.getItem('name');
+      var storedPw = localStorage.getItem('pw');
+
+      var userName = document.getElementById('userName');
+      var userPw = document.getElementById('userPw');
+      var userRemember = document.getElementById("rememberMe");
+
+      if(userName.value == storedName && userPw.value == storedPw){
+          alert('Login Succesful');
+      }else{
+          alert('UnSuccesful');
+      }
+  }
+
+  </script>
+
+</body>
+</html>
